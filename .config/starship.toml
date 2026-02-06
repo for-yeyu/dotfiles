@@ -1,0 +1,39 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+\n$character
+"""
+
+[directory]
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+#[git_branch]
+#symbol = "TvT"
+#format = '[$symbol \($branch\) ]($style)'
+#style = 'cyan'
+
+[git_branch]
+symbol = "TvT"
+format = '[[$symbol](#EC7FA9) \([$branch](yellow)\) ]($style)'
+style = 'cyan'
+
+[git_status]
+conflicted = "|🤡 conflicted"
+ahead = "↑🎉 ahead"
+behind = "↓😡 behind"
+diverged  = "|🤬 diverged"
+modified  = "|🥹 modified"
+staged    = "|😋 staged"
+untracked = "|😅 untracked"
+# stashed = "📦"
+# renamed = "➜"
+# deleted = "✖"
+
+format = '([$all_status$ahead_behind]($style)) '
+style = "cyan"
+
