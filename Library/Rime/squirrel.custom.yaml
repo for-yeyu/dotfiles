@@ -1,0 +1,58 @@
+patch:
+  show_notifications_when: appropriate 
+
+  style/color_scheme: suki
+
+  preset_color_schemes:
+    suki:
+      name: suki
+      text_orientation: horizontal
+      candidate_list_layout: linear
+      back_color: 0xFFFFFF
+      border_height: 0 
+      border_width: 8 
+      candidate_format: "%c %@" 
+      comment_text_color: 0x999999 
+      corner_radius: 8 
+      hilited_corner_radius: 8 
+      font_face: "LXGWWenKai-Regular"
+      font_point: 24 
+      # * 使用最久的深蓝色 0x9A501F
+      hilited_candidate_back_color: 0xA0210E
+      hilited_candidate_text_color: 0xEFEFEA 
+
+      label_font_point: 16 
+      text_color: 0x424242 
+      inline_preedit: true 
+
+  # * 特定App默认中/英文输入
+  app_options:
+    com.apple.Spotlight:
+    # * true默认英文,false默认中文
+      ascii_mode: true 
+    com.apple.Terminal: 
+      ascii_mode: true
+      vim_mode: true
+      # cursor
+    com.todesktop.230313mzl4w4u92: 
+      vim_mode: true
+    com.microsoft.VSCode: 
+      ascii_mode: true
+      # 有时候还是挺有必要的在 vscode 中输入全角符号~
+      # 中文状态输出英文标点(半角)
+      # ascii_punct: true 
+      vim_mode: true
+    com.apple.dt.Xcode: 
+      ascii_mode: true
+    com.termius-dmg.mac: 
+      ascii_mode: true
+      # * 好像配置没啥用
+    com.googlecode.iterm2:
+      ascii_mode: true
+      vim_mode: true
+    dev.warp.Warp-Stable:
+      ascii_mode: true
+      vim_mode: true
+    net.kovidgoyal.kitty:
+      ascii_mode: true
+      vim_mode: true

@@ -1,0 +1,31 @@
+patch:
+  schema_list:
+    - schema: luna_pinyin_simp
+
+  menu/page_size: 9 # 候选词个数
+
+  ascii_composer/good_old_caps_lock: true # 若为 true， Caps 只切换大小写
+  ascii_composer/switch_key:
+    Caps_Lock: commit_code # Caps 键
+    Shift_R: commit_code # 右 Shift，切换中英文
+    Control_L: noop # 左 Control，屏蔽该切换键
+    Control_R: noop # 右 Control，屏蔽该切换键
+
+  key_binder/bindings: # 若开启, 去掉前面#
+    - { when: has_menu, accept: Tab, send: Page_Down } # "tab" 键翻页, 和 "tab" 键分词只能二选一
+    - { when: paging, accept: minus, send: Page_Up } # "-" 上一页
+    - { when: has_menu, accept: equal, send: Page_Down } # "=" 下一页
+    # * 最常用
+    - { when: paging, accept: comma, send: Page_Up } # "," 上一页
+    - { when: has_menu, accept: period, send: Page_Down } # "." 下一页
+    # * 从来不用了
+    - { when: paging, accept: bracketleft, send: Page_Up } # "[" 上一页
+    - { when: has_menu, accept: bracketright, send: Page_Down } # "]" 下一页
+
+    # 快捷键
+    - { when: has_menu, accept: semicolon, send: 2 } # ":" (分号)选择第 2 个候选词
+    - { when: has_menu, accept: apostrophe, send: 3 } # "'" (引号)选择第 3 个候选词
+    - { when: always, accept: Control+l, toggle: ascii_mode } # 中/英文切换
+    - { when: composing, accept: Control+n, send: Right } # "Control+f" 向右选择候选词
+    - { when: composing, accept: Control+p, send: Left } # "Control+f" 向右选择候选词
+    #- { when: composing, accept: Control+h, send: BackSpace }      # "Control+h" 删除输入码

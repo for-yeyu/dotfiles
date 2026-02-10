@@ -1,0 +1,26 @@
+# * RIME =======================
+Library/Rime/*.ldb
+Library/Rime/*.log
+Library/Rime/LOCK
+Library/Rime/LOG
+Library/Rime/LOG.old
+Library/Rime/CURRENT
+Library/Rime/MANIFEST-*
+
+Library/Rime/*.bin
+Library/Rime/build/
+
+Library/Rime/sync/
+Library/Rime/*.userdb/
+
+Library/Rime/user.yaml
+Library/Rime/installation.yaml
+Library/Rime/trash/
+
+Library/Rime/*.swp
+Library/Rime/*.swo
+Library/Rime/*.bak
+Library/Rime/.DS_Store
+
+
+Library/Rime/**/.DS_Store
