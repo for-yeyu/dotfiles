@@ -1,19 +1,18 @@
 # 左右分屏（左 / 右）
 map cmd+d launch --location=hsplit --cwd=current
 
-map cmd+w send_key cmd+w
+map cmd+w discard_event
 map shift+cmd+w close_window
-map ctrl+tab send_key ctrl+tab
+map ctrl+tab discard_event
 # * Fuck Apple, Fuck MacOS
 map cmd+h no_op
-map cmd+0 send_key cmd+0
+map cmd+0 no_op
 
 map cmd+h neighboring_window left
 map cmd+l neighboring_window right
 map cmd+j neighboring_window bottom
-map cmd+k neighboring_window top
+map cmd+k discard_event
 
 # * open directly http://localhost:3000
 # * default key map => ctrl + shift + e
 map cmd+o open_url http://localhost:3000
-
