@@ -1,10 +1,10 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-$directory\
+[╭─](bold magenta)$directory\
 $git_branch\
 $git_status\
-\n$character
+\n[╰─ ](bold magenta)
 """
 
 [directory]
@@ -37,4 +37,3 @@ deleted = "|🤮 deleted"
 
 format = '([$all_status$ahead_behind]($style)) '
 style = "cyan"
-
