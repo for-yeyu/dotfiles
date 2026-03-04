@@ -3,13 +3,10 @@ export ZSH="$HOME/.oh-my-zsh"
 plugins=(
 	git
 	zsh-autosuggestions
-        zsh-syntax-highlighting
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
-
-ZSH_THEME=""
-
 
 # pnpm
 export PNPM_HOME="/Users/Lawliet/Library/pnpm"
@@ -19,6 +16,7 @@ case ":$PATH:" in
 esac
 
 alias p="pnpm"
+alias cc="clear"
 
 # bun completions
 [ -s "/Users/Lawliet/.bun/_bun" ] && source "/Users/Lawliet/.bun/_bun"
@@ -53,9 +51,5 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# kitty
-alias ky='kitty --single-instance --directory'
-
 # starship
 eval "$(starship init zsh)"
-
