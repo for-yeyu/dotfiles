@@ -46,10 +46,28 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/emulator
 
-
 . "$HOME/.local/bin/env"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# proxy functions
+proxy_on() {
+  export http_proxy="http://127.0.0.1:7897"
+  export https_proxy="http://127.0.0.1:7897"
+  export all_proxy="socks5://127.0.0.1:7897"
+  export HTTP_PROXY="$http_proxy"
+  export HTTPS_PROXY="$https_proxy"
+  export ALL_PROXY="$all_proxy"
+  echo "proxy enabled"
+}
+
+proxy_off() {
+  unset http_proxy https_proxy all_proxy
+  unset HTTP_PROXY HTTPS_PROXY ALL_PROXY
+  echo "proxy disabled"
+}
+
+proxy_on
 
 # starship
 eval "$(starship init zsh)"
