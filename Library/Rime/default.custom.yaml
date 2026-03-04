@@ -25,7 +25,7 @@ patch:
     # 快捷键
     - { when: has_menu, accept: semicolon, send: 2 } # ":" (分号)选择第 2 个候选词
     - { when: has_menu, accept: apostrophe, send: 3 } # "'" (引号)选择第 3 个候选词
-    - { when: always, accept: Control+l, toggle: ascii_mode } # 中/英文切换
+    - { when: always, accept: Control+semicolon, toggle: ascii_mode } # 中/英文切换
     - { when: composing, accept: Control+n, send: Right } # "Control+f" 向右选择候选词
     - { when: composing, accept: Control+p, send: Left } # "Control+f" 向右选择候选词
     #- { when: composing, accept: Control+h, send: BackSpace }      # "Control+h" 删除输入码
