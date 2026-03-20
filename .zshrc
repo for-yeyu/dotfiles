@@ -17,6 +17,7 @@ esac
 
 alias p="pnpm"
 alias cc="clear"
+alias ccp="clear && pnpm dev"
 
 # bun completions
 [ -s "/Users/Lawliet/.bun/_bun" ] && source "/Users/Lawliet/.bun/_bun"
@@ -71,3 +72,8 @@ proxy_on
 
 # starship
 eval "$(starship init zsh)"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/Lawliet/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
