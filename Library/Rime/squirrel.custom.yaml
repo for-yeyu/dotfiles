@@ -46,6 +46,12 @@ patch:
       # 中文状态输出英文标点(半角)
       # ascii_punct: true
       vim_mode: true
+    com.vscodium:
+      ascii_mode: true
+      # 有时候还是挺有必要的在 vscodium 中输入全角符号~
+      # 中文状态输出英文标点(半角)
+      # ascii_punct: true
+      vim_mode: true
     com.apple.dt.Xcode:
       ascii_mode: true
     com.termius-dmg.mac:
