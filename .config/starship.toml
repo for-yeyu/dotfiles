@@ -1,14 +1,15 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[╭─](bold magenta)$directory\
+[╭─](bold #F7A8C4)$directory\
 $git_branch\
 $git_status\
-\n[╰─ ](bold magenta)
+\n[╰─ ](bold #F7A8C4)
 """
 
 [directory]
 format = "[ $path ]($style)"
+style = "bold #FFB7C5"
 truncation_length = 3
 truncation_symbol = "…/"
 
@@ -19,8 +20,8 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = "TvT"
-format = '[[$symbol](#EC7FA9) \([$branch](yellow)\) ]($style)'
-style = 'cyan'
+format = '[[$symbol](#EC7FA9) \([$branch](#D45D8F)\) ]($style)'
+style = 'bold #F4A7B9'
 
 [git_status]
 conflicted = "|🤡 conflicted"
@@ -36,4 +37,4 @@ renamed = "|🫣  renamed"
 deleted = "|🤮 deleted"
 
 format = '([$all_status$ahead_behind]($style)) '
-style = "cyan"
+style = "bold #A7C7A2"
