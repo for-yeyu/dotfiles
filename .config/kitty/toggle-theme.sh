@@ -15,7 +15,11 @@ fi
 if [ "$CURRENT" = "dark" ]; then
     ln -sf "${LIGHT_THEME}" "${CURRENT_THEME_FILE}"
     echo "light" > "${STATE_FILE}"
+    "${KITTY_CONFIG_DIR}/sync-starship-theme.sh"
+    kitty @ set-colors --all --configured "${LIGHT_THEME}"
 else
     ln -sf "${DARK_THEME}" "${CURRENT_THEME_FILE}"
     echo "dark" > "${STATE_FILE}"
+    "${KITTY_CONFIG_DIR}/sync-starship-theme.sh"
+    kitty @ set-colors --all --configured "${DARK_THEME}"
 fi
