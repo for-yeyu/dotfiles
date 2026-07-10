@@ -13,8 +13,13 @@ style = "bold #7DCFFF"
 truncation_length = 3
 truncation_symbol = "…/"
 
+#[git_branch]
+#symbol = "TvT"
+#format = '[$symbol \($branch\) ]($style)'
+#style = 'cyan'
+
 [git_branch]
-symbol = "🤣👉"
+symbol = "TvT"
 format = '[[$symbol](#BB9AF7) \([$branch](#9D7CD8)\) ]($style)'
 style = 'bold #7AA2F7'
 
