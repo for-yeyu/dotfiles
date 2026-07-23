@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 kittyConfigDir="${HOME}/.config/kitty"
 
-kitty @ load-config "${kittyConfigDir}/kitty.conf"
+kitten @ load-config "${kittyConfigDir}/kitty.conf"
